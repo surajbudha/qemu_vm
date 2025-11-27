@@ -2,12 +2,6 @@
 # Variables
 ###############################
 
-variable "libvirt_uri" {
-  description = "Connection URI for libvirt (e.g. qemu:///system)"
-  type        = string
-  default     = "qemu:///system"
-}
-
 variable "vm_name" {
   type        = string
   description = "Name of the VM to create"
@@ -15,8 +9,14 @@ variable "vm_name" {
 
 variable "iso_url" {
   type        = string
-  default = "/var/www/html/isos/Rocky-9.6-x86_64-minimal.iso"
+  #default = "/var/www/html/isos/Rocky-9.6-x86_64-minimal.iso"
   description = "URL of the ISO image to boot from"
+}
+
+variable "libvirt_uri" {
+  description = "Connection URI for libvirt (e.g. qemu:///system)"
+  type        = string
+  default     = "qemu:///system"
 }
 
 variable "memory" {
